@@ -21,6 +21,7 @@ get '/:id_or_url' do
     json = PlusFeed.fetch_json(id)
     @plus = PlusFeed.new(json)
     @id = id
+    @hostname = "#{request.host}:#{request.port}"
     content_type "application/atom+xml", :charset => "utf-8"
     erubis :feed, :layout => false
   rescue => ex

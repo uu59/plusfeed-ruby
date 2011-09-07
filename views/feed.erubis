@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title>[GooglePlusFeed] <%==@plus.author %></title>
-  <link href="http://<%== request.host %>:<%== request.port %>/<%== @id %>" rel="self" />
+  <link href="http://<%== @hostname %>/<%== @id %>" rel="self" />
  <link href="http://plus.google.com/<%== @id %>" rel="alternate" />
  <updated><%==@plus.posts.sort_by{|p| p[:updated_at]}.first[:updated_at].strftime('%Y-%m-%dT%H:%M:%S+09:00')%></updated>
- <id>http://plusfeed.uu59.org/<%== @id %></id>
+ <id>http://<%== @hostname %>/<%== @id %></id>
  <author><name><%== @plus.author %></name></author>
 
  <% @plus.posts.each{|post| %>
