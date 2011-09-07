@@ -17,4 +17,7 @@ You need Heroku account.
 You can see your app is runnning at http://afternoon-rain-116.heroku.com/ 
 But hostname is unique.
 
+# Demo
 
+http://googleplusfeed.heroku.com/
+http://googleplusfeed.heroku.com/102150693225130002912
