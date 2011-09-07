@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title>[GooglePlusFeed] <%==@plus.author %></title>
+ <link href="http://plusfeed.uu59.org/<%== @id %>" rel="self" />
+ <link href="http://plus.google.com/<%== @id %>" rel="alternate" />
+ <updated><%==@plus.posts.sort_by{|p| p[:updated_at]}.first[:updated_at].strftime('%Y-%m-%dT%H:%M:%S+09:00')%></updated>
+ <id>http://plusfeed.uu59.org/<%== @id %></id>
+ <author><name><%== @plus.author %></name></author>
+
+ <% @plus.posts.each{|post| %>
+ <entry>
+   <link href="<%== post[:link] %>"/>
+   <title><%==post[:title]%></title>
+   <id>tag:plus.google.com,<%==post[:updated_at].strftime('%Y-%m-%d')%>:/<%==post[:id]%>/</id>
+   <updated><%==post[:updated_at].strftime('%Y-%m-%dT%H:%M:%S+09:00')%></updated>
+   <content type="html"><%==post[:description]%></content>
+ </entry>
+ <% } %>
+
+</feed>

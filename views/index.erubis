@@ -1,0 +1,19 @@
+<form action="/">
+<p>
+Analyzing data structure works by <a href="https://github.com/russellbeattie">russellbeattie</a>.
+</p>
+
+<% if @error %>
+<p style="color:red"><%==@error%></p>
+<% end %>
+<p>input G+ url or id</p>
+<p>
+e.g. : https://plus.google.com/102150693225130002912
+</p>
+<p>
+<input style="width:100%" type="text" name="id_or_url" value="<%==params[:id_or_url]%>" />
+</p>
+<p>
+<input type="submit" />
+</p>
+</form>

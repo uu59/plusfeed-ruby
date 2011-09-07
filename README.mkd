@@ -1,0 +1,20 @@
+This is porting of [plusfeed](https://github.com/russellbeattie/plusfeed) for Heroku.
+
+# Setup
+
+You need Heroku account.
+
+    $ cd $HOME
+    $ git clone https://github.com/uu59/plusfeed-ruby
+    $ cd plusfeed-ruby
+    $ gem install heroku
+    $ heroku create
+    Creating afternoon-rain-116... done
+    http://afternoon-rain-116.heroku.com/ | git@heroku.com:afternoon-rain-116.git
+    Git remote heroku added
+    $ git push heroku master:master
+
+You can see your app is runnning at http://afternoon-rain-116.heroku.com/ 
+But hostname is unique.
+
+

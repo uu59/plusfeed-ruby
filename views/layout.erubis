@@ -1,0 +1,9 @@
+<!DOCTYPE html> 
+<html lang="ja"> 
+<head> 
+<title></title> 
+</head> 
+<body>
+<h1><a href="/">plusfeed</a></h1>
+<%= yield %>
+</body></html> 
